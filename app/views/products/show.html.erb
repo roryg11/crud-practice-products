@@ -1,25 +1,21 @@
 <h1><%= @product.name %></h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Created</th>
-      <th>Last Updated</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @product.name %></td>
-      <td><%= @product.description %></td>
-      <td><%= @product.price %></td>
-      <td><%= @product.created_at %></td>
-      <td><%= @product.updated_at %></td>
-    </tr>
-  </tbody>
-</table>
+<dl>
+  <dt>Name</dt>
+  <dd><%= @product.name %></dd>
+
+  <dt>Description</dt>
+  <dd><%= @product.description %></dd>
+
+  <dt>Price</dt>
+  <dd><%= @product.price %></dd>
+
+  <dt>Created</dt>
+  <dd><%= @product.created_at %></dd>
+
+  <dt>Last Updated</dt>
+  <dd><%= @product.updated_at %></dd>
+</dl>
 
 <%= link_to "Edit", edit_product_path %>
-<%= link_to "Delete", product_path(@product), method: :destroy, data: {confirm: "Are you sure?"} %>
+<%= link_to "Delete", product_path(@product), method: :delete, data: {confirm: "Are you sure?"} %>
