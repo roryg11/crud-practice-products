@@ -30,7 +30,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.update(product_params)
     if @product.save
-      redirect_to 
+      redirect_to products_path
+      flash[:notice]= "Product was updated successfully"
     else
       render :edit
     end
