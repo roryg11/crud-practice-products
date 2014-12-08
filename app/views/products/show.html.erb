@@ -1,1 +1,22 @@
 <h1><%= @product.name %></h1>
+
+<div class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Created</th>
+      <th>Last Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @product.name %></td>
+      <td><%= @product.description %></td>
+      <td><%= @product.price %></td>
+      <td><%= @product.created_at %></td>
+      <td><%= @product.updated_at %></td>
+    </tr>
+  </tbody>
+</div>
