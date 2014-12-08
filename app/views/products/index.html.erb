@@ -1,1 +1,25 @@
 <%= link_to "New Product", new_product_path %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Date Created</th>
+      <th>Last Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @products.each do |product| %>
+        <td><%= link_to "#{product.name}", product_path(product) %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= product.created_at %></td>
+        <td><%= product.updated_at %></td>
+      <% end %>
+    </tr>
+  </tbody>
+
+</table>
