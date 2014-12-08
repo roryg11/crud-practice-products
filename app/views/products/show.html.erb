@@ -22,3 +22,4 @@
 </table>
 
 <%= link_to "Edit", edit_product_path %>
+<%= link_to "Delete", product_path(@product), method: :destroy, data: {confirm: "Are you sure?"} %>
